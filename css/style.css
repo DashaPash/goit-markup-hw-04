@@ -6,6 +6,7 @@
   --text-color: #757575;
   --white-transparent-color: rgba(255, 255, 255, 0.6);
   --blue-accent: #2196f3;
+  --icons-border-color: #afb1b8;
 }
 
 h1,
@@ -86,7 +87,8 @@ body {
 }
 
 .about-title,
-.team-section-title {
+.team-section-title,
+.client-title {
   color: var(--title-text-color);
 
   font-weight: 700;
@@ -94,6 +96,17 @@ body {
   line-height: 1.16;
   text-align: center;
 }
+
+.icon-team-item,
+.icon-studio-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50% 50%;
+}
+
 /*----------------Компоненты конец---------*/
 
 /*--------------- Шапка сайта-------------*/
@@ -151,7 +164,6 @@ body {
 
 .nav-icon {
   fill: currentColor;
-
   margin-right: 10px;
 }
 
@@ -189,7 +201,8 @@ body {
     url(../images/studio-page/hero-img.jpg);
 
   background-repeat: no-repeat;
-  background-position: cover;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -217,6 +230,7 @@ body {
   border-radius: 4px;
   min-width: 200px;
   border-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero-button:hover {
@@ -337,12 +351,6 @@ body {
 }
 
 .icon-team-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50% 50%;
   background-color: var(--white-color);
 }
 
@@ -352,7 +360,7 @@ body {
 }
 
 .social-icon {
-  fill: #afb1b8;
+  fill: var(--icons-border-color);
 }
 
 .icon-team-item:hover .social-icon,
@@ -361,6 +369,46 @@ body {
 }
 
 /*--------------------Секция Наша Команда Конец--------------------------*/
+
+/*--------------------Секция Постоянные Клиенты---------------*/
+
+.client-title {
+  padding-bottom: 50px;
+}
+
+.client-list {
+  display: flex;
+}
+
+.client-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icons-border-color);
+  border-radius: 4px;
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--blue-accent);
+}
+
+.client-icon {
+  fill: var(--icons-border-color);
+}
+
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+  fill: var(--blue-accent);
+}
+
+/*--------------------Секция Постоянные Клиенты Конец---------------*/
 
 /*---------------------------Футер----------------*/
 
@@ -374,8 +422,16 @@ body {
   color: var(--white-color);
 }
 
-.footer-container > .logo {
+.footer-container {
+  display: flex;
+}
+
+.studio-contact > .logo {
   padding-bottom: 20px;
+}
+
+.studio-contact {
+  padding-right: 70px;
 }
 
 .adres,
@@ -399,6 +455,38 @@ body {
 .phone-number {
   color: var(--white-transparent-color);
   text-decoration: none;
+}
+
+.welcome-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-color);
+  padding-bottom: 20px;
+}
+
+.icon-studio-list {
+  display: flex;
+}
+
+.icon-studio-item:not(:last-child) {
+  padding-right: 10px;
+}
+
+.icon-studio-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon-studio-link:hover,
+.icon-studio-link:focus {
+  background-color: var(--blue-accent);
+}
+
+.social-studio-icon {
+  fill: var(--white-color);
 }
 
 /*---------------------------Футер Конец----------------*/
